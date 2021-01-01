@@ -25,9 +25,8 @@ CREATE TABLE PLAYLIST (
 CREATE TABLE SCORE (
     score_id BIGSERIAL NOT NULL PRIMARY KEY,
     score DECIMAL(10) DEFAULT 0,
-
-
-)
+    user_id BIGINT REFERENCES USER_ACCOUNT(user_id)
+);
 
 
 INSERT INTO USER_ACCOUNT(email, age, country, username, password ) 
@@ -167,3 +166,36 @@ INSERT INTO PLAYLIST (name, date, user_id)
     VALUES ('for travel', CURRENT_DATE, 10);
 INSERT INTO PLAYLIST (name, date, user_id) 
     VALUES ('my music to work', CURRENT_DATE, 13);
+
+
+
+INSERT INTO SCORE (score, user_id) 
+    VALUES (8, 1);
+INSERT INTO SCORE (score, user_id) 
+    VALUES (9, 2);
+INSERT INTO SCORE (score, user_id) 
+    VALUES (5, 3);
+INSERT INTO SCORE (score, user_id) 
+    VALUES (6, 4);
+INSERT INTO SCORE (score, user_id) 
+    VALUES (8, 5);
+INSERT INTO SCORE (score, user_id) 
+    VALUES (9, 6);
+INSERT INTO SCORE (score, user_id) 
+    VALUES (7, 7);
+INSERT INTO SCORE (score, user_id) 
+    VALUES (8, 8);
+INSERT INTO SCORE (score, user_id) 
+    VALUES (6, 9);
+INSERT INTO SCORE (score, user_id) 
+    VALUES (5, 10);
+INSERT INTO SCORE (score, user_id) 
+    VALUES (8, 11);
+INSERT INTO SCORE (score, user_id) 
+    VALUES (9, 12);
+INSERT INTO SCORE (score, user_id) 
+    VALUES (10, 13);
+INSERT INTO SCORE (score, user_id) 
+    VALUES (2, 14);
+INSERT INTO SCORE (score, user_id) 
+    VALUES (8, 17);
